@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f9;
+  color: #333;
+}
+
+nav {
+  background: #222;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem;
+}
+
+section {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 45%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
