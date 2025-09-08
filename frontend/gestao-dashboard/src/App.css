@@ -1,0 +1,276 @@
+/* Importação das fontes */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Variáveis de cores para tema escuro */
+:root {
+  --primary-color: #4e73df;
+  --secondary-color: #858796;
+  --dark-bg: #2e59d9;
+  --dark-card-bg: #2A2F45;
+  --darker-bg: #1A1F35;
+  --text-light: #FFFFFF;
+  --text-muted: #B7B9CC;
+  --border-dark: #3A3F58;
+}
+
+/* Estilos gerais */
+body {
+  font-family: 'Poppins', 'Montserrat', sans-serif !important;
+  background: linear-gradient(135deg, #0F123B 0%, #1A1F35 100%) !important;
+  color: var(--text-light) !important;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar estilo dark */
+.navbar-brand {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1.5rem !important;
+  color: var(--text-light) !important;
+}
+
+.navbar-dark {
+  background: linear-gradient(135deg, #1A1F35 0%, #2A2F45 100%) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: var(--text-muted) !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: var(--text-light) !important;
+  transform: translateY(-1px);
+}
+
+/* Conteúdo principal */
+main {
+  flex: 1;
+  padding: 30px;
+  margin-top: 0;
+  background: transparent;
+}
+
+/* Cards estilo dark */
+.card {
+  background: var(--dark-card-bg) !important;
+  border: none !important;
+  border-radius: 15px !important;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3) !important;
+  margin-bottom: 2rem !important;
+  transition: all 0.3s ease !important;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4) !important;
+}
+
+.card-header {
+  background: linear-gradient(135deg, #2A2F45 0%, #1A1F35 100%) !important;
+  border-bottom: 1px solid var(--border-dark) !important;
+  font-weight: 600 !important;
+  color: var(--text-light) !important;
+  padding: 1.5rem !important;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.card-body {
+  padding: 2rem !important;
+  background: var(--dark-card-bg) !important;
+  color: var(--text-light) !important;
+}
+
+/* Títulos */
+h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 600 !important;
+  color: var(--text-light) !important;
+}
+
+h2 {
+  font-size: 1.8rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* Tabela estilo dark */
+.table-responsive {
+  border-radius: 12px !important;
+  overflow: hidden;
+  border: 1px solid var(--border-dark) !important;
+}
+
+.table {
+  margin-bottom: 0 !important;
+  background: transparent !important;
+  color: var(--text-light) !important;
+}
+
+.table thead th {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-bg) 100%) !important;
+  color: white !important;
+  border: none !important;
+  font-weight: 600 !important;
+  padding: 1.25rem !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.9rem !important;
+}
+
+.table tbody td {
+  padding: 1.25rem !important;
+  vertical-align: middle !important;
+  border-color: var(--border-dark) !important;
+  color: var(--text-light) !important;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(78, 115, 223, 0.1) !important;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(78, 115, 223, 0.2) !important;
+}
+
+/* Alertas estilo dark */
+.alert {
+  border: none !important;
+  border-radius: 12px !important;
+  padding: 1.5rem !important;
+  background: linear-gradient(135deg, #2A2F45 0%, #1A1F35 100%) !important;
+  border-left: 4px solid !important;
+}
+
+.alert-secondary {
+  color: var(--text-muted) !important;
+  border-left-color: var(--secondary-color) !important;
+}
+
+.alert-info {
+  color: var(--text-light) !important;
+  border-left-color: var(--primary-color) !important;
+  background: linear-gradient(135deg, #2A2F45 0%, #1A1F35 100%) !important;
+}
+
+/* Badges */
+.badge {
+  font-weight: 600 !important;
+  padding: 0.6rem 1rem !important;
+  border-radius: 8px !important;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.bg-primary { background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-bg) 100%) !important; }
+.bg-success { background: linear-gradient(135deg, #1cc88a 0%, #13855c 100%) !important; }
+
+/* Footer dark */
+footer {
+  background: linear-gradient(135deg, #1A1F35 0%, #2A2F45 100%) !important;
+  margin-top: auto !important;
+  padding: 2rem 0 !important;
+  border-top: 1px solid var(--border-dark) !important;
+}
+
+footer small {
+  color: var(--text-muted) !important;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+/* Cartões de métricas */
+.card.bg-primary { 
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-bg) 100%) !important; 
+}
+
+.card.bg-success { 
+  background: linear-gradient(135deg, #1cc88a 0%, #13855c 100%) !important; 
+}
+
+.card.bg-info { 
+  background: linear-gradient(135deg, #36b9cc 0%, #258391 100%) !important; 
+}
+
+.card.bg-warning { 
+  background: linear-gradient(135deg, #f6c23e 0%, #d4a63a 100%) !important; 
+}
+
+/* Text utilities */
+.text-gray-800 { color: var(--text-light) !important; }
+.text-gray-600 { color: var(--text-muted) !important; }
+.text-light { color: var(--text-light) !important; }
+
+/* Responsividade */
+@media (max-width: 768px) {
+  main {
+    padding: 20px !important;
+  }
+  
+  .card-body {
+    padding: 1.5rem !important;
+  }
+  
+  .table thead th,
+  .table tbody td {
+    padding: 1rem !important;
+  }
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: fadeIn 0.6s ease-out !important;
+}
+
+/* Loader */
+.loading-spinner {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 3px solid var(--border-dark);
+  border-top: 3px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Garantir que todos os textos usem a fonte correta */
+* {
+  font-family: 'Poppins', 'Montserrat', sans-serif !important;
+}
+
+p, span, div, td, th {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+strong {
+  font-weight: 600 !important;
+}

@@ -27,12 +27,34 @@ app.get("/", (req, res) => {
   res.send("API funcionando 🚀");
 });
 
-// Rota para listar usuários
-app.get("/usuarios", (req, res) => {
-  db.query("SELECT * FROM usuarios", (err, results) => {
+// Rota para listar usuários (agora com /api/)
+app.get("/api/usuarios", (req, res) => {
+  db.query("SELECT id, nome, email FROM usuarios", (err, results) => {
     if (err) return res.status(500).json(err);
     res.json(results);
   });
+});
+
+// Rota para adicionar usuário
+app.post("/api/usuarios", (req, res) => {
+  const { nome, email } = req.body;
+  
+  // Validação simples
+  if (!nome || !email) {
+    return res.status(400).json({ error: "Nome e email são obrigatórios" });
+  }
+
+  db.query(
+    "INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)",
+    [nome, email, "senha_temporaria"],
+    (err, results) => {
+      if (err) {
+        console.error("Erro ao inserir usuário:", err);
+        return res.status(500).json({ error: "Erro interno do servidor" });
+      }
+      res.json({ id: results.insertId, nome, email });
+    }
+  );
 });
 
 app.listen(3001, () => {
