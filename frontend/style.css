@@ -1,27 +1,136 @@
+/* Estilo base */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f4f9;
+  font-family: "Poppins", sans-serif;
+  background: #f4f6fa;
   color: #333;
-}
-
-nav {
-  background: #222;
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
-  display: flex;
-  justify-content: space-around;
-  margin: 2rem;
+    flex: 1;
+    padding: 20px;
+}
+    
+.card {
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+}
+    
+footer {
+    margin-top: auto;
 }
 
+h2 {
+  font-weight: bold;
+}
+
+.alert {
+  font-size: 1rem;
+}
+
+
+/* Navbar */
+nav {
+  background: #222;
+  color: #fff;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+nav h1 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Layout principal */
+main {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* Seções */
 section {
   background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+section h2 {
+  margin-top: 0;
+}
+
+/* Cards */
+.card {
+  background: #f9f9f9;
   padding: 1rem;
+  border: 1px dashed #aaa;
   border-radius: 8px;
-  width: 45%;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  color: #666;
+}
+
+/* Tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+table th, table td {
+  padding: 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background: #222;
+  color: #fff;
+}
+
+table tr:hover {
+  background: #f1f1f1;
+}
+
+/* Fontes */
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
