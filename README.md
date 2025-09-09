@@ -66,7 +66,22 @@ O frontend estará em: http://localhost:3000
 ### 4. Banco de Dados
 Execute o script SQL em backend/database.sql
 
-### 🎯 Como Usar
+```bash
+CREATE DATABASE gestao_empresarial;
+USE gestao_empresarial;
+
+CREATE TABLE usuarios (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(100),
+  email VARCHAR(100),
+  senha VARCHAR(255)
+);
+
+INSERT INTO usuarios (nome, email, senha) 
+VALUES ("Teste", "teste@email.com", "1234");
+```
+
+## 🎯 Como Usar
 1. *Dashboard:* Visualize métricas empresariais em tempo real
 2. *Usuários:* Gerencie usuários do sistema com operações CRUD
 3. *Chatbot:* Interaja com o assistente virtual para suporte
@@ -77,7 +92,7 @@ Execute o script SQL em backend/database.sql
 - "Status do pedido"
 - "Preciso de ajuda"
 
-### 🤝 Desenvolvimento
+## 🤝 Desenvolvimento
 **Metodologia**
 - Desenvolvimento Incremental
 - Componentes React Modulares
