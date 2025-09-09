@@ -21,33 +21,55 @@ const Users = () => {
   };
 
   if (loading) {
-    return <div className="text-center my-4">Carregando usuários...</div>;
+    return (
+      <section id="usuarios" className="my-4">
+        <div className="card">
+          <div className="card-header">
+            <h2>👥 Usuários</h2>
+          </div>
+          <div className="card-body text-center py-5">
+            <div className="spinner-border text-primary" role="status">
+              <span className="visually-hidden">Carregando...</span>
+            </div>
+            <p className="mt-3">Carregando usuários...</p>
+          </div>
+        </div>
+      </section>
+    );
   }
 
   return (
     <section id="usuarios" className="my-4">
-      <div className="card shadow-sm">
+      <div className="card">
+        <div className="card-header">
+          <h2>👥 Usuários</h2>
+        </div>
         <div className="card-body">
-          <h2 className="h5 mb-3">Usuários</h2>
-          <div className="table-responsive">
-            <table className="table table-striped table-hover align-middle">
-              <thead className="table-dark">
-                <tr>
-                  <th>ID</th>
-                  <th>Nome</th>
-                  <th>Email</th>
-                </tr>
-              </thead>
-              <tbody>
-                {users.map(user => (
-                  <tr key={user.id}>
-                    <td>{user.id}</td>
-                    <td>{user.nome}</td>
-                    <td>{user.email}</td>
+          <div className="table-container">
+            <div className="table-responsive">
+              <table className="table table-striped table-hover">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Status</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {users.map(user => (
+                    <tr key={user.id}>
+                      <td><strong>#{user.id}</strong></td>
+                      <td>{user.nome}</td>
+                      <td>{user.email}</td>
+                      <td>
+                        <span className="badge bg-success">Ativo</span>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>

@@ -148,6 +148,102 @@ h2 {
   background-color: rgba(78, 115, 223, 0.2) !important;
 }
 
+/* ESTILOS ESPECÍFICOS PARA A TABELA DE USUÁRIOS */
+.table-container {
+  background: var(--dark-card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  margin: 1rem 0;
+}
+
+.table {
+  margin-bottom: 0;
+  color: var(--text-light);
+  width: 100%;
+}
+
+.table thead th {
+  background: linear-gradient(135deg, #4e73df 0%, #2e59d9 100%) !important;
+  color: white !important;
+  border: none !important;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  padding: 1.2rem;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.table tbody td {
+  padding: 1.2rem;
+  vertical-align: middle;
+  border-color: var(--border-dark) !important;
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-light) !important;
+  background: var(--dark-card-bg) !important;
+}
+
+/* Melhor contraste para as células */
+.table tbody tr {
+  background: var(--dark-card-bg);
+  transition: all 0.3s ease;
+}
+
+.table tbody tr:hover {
+  background: rgba(78, 115, 223, 0.1) !important;
+  transform: translateX(5px);
+}
+
+/* Linhas zebradas para melhor leitura */
+.table-striped tbody tr:nth-of-type(odd) {
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+  background: rgba(255, 255, 255, 0.02) !important;
+}
+
+/* Badges com melhor contraste */
+.badge {
+  font-weight: 600;
+  padding: 0.5rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.bg-success {
+  background: linear-gradient(135deg, #1cc88a 0%, #13855c 100%) !important;
+  color: white !important;
+}
+
+.bg-primary {
+  background: linear-gradient(135deg, #4e73df 0%, #2e59d9 100%) !important;
+}
+
+/* Destaque para o ID */
+td:first-child {
+  font-weight: 700;
+  color: #4e73df !important;
+}
+
+/* Melhor espaçamento e alinhamento */
+.table td, .table th {
+  vertical-align: middle;
+}
+
+/* Responsividade para tabela */
+@media (max-width: 768px) {
+  .table thead th,
+  .table tbody td {
+    padding: 0.8rem;
+    font-size: 0.85rem;
+  }
+  
+  .badge {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.6rem;
+  }
+}
 /* Alertas estilo dark */
 .alert {
   border: none !important;
@@ -273,4 +369,8 @@ p, span, div, td, th {
 
 strong {
   font-weight: 600 !important;
+}
+
+.text-muted {
+    color: var(--text-muted) !important;
 }
