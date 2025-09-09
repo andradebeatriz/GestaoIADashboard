@@ -31,7 +31,7 @@ function App() {
       </main>
       <footer className="bg-dark text-white text-center py-3">
         <div className="container">
-          <small>&copy; 2024 Gestão Empresarial. Todos os direitos reservados.</small>
+          <small>&copy; 2025 Gestão Empresarial. Todos os direitos reservados.</small>
         </div>
       </footer>
     </div>
